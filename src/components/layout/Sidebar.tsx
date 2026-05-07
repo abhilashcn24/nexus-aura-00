@@ -1,17 +1,12 @@
 import { Link, useRouterState } from "@tanstack/react-router";
 import { motion } from "framer-motion";
 import {
-  Activity, MapPin, Siren, BarChart3, Hospital, Settings,
-  AlertTriangle, Radio, Shield,
+  Activity,
+  Shield,
 } from "lucide-react";
 
 const items = [
-  { to: "/", icon: Activity, label: "Overview" },
-  { to: "/tracking", icon: MapPin, label: "Live Tracking" },
-  { to: "/alerts", icon: Siren, label: "Active Alerts" },
-  { to: "/hospitals", icon: Hospital, label: "Hospitals" },
-  { to: "/analytics", icon: BarChart3, label: "Analytics" },
-  { to: "/settings", icon: Settings, label: "Settings" },
+  { to: "/", icon: Activity, label: "Dashboard" },
 ];
 
 export function Sidebar() {
@@ -27,8 +22,8 @@ export function Sidebar() {
           <span className="absolute -top-1 -right-1 h-3 w-3 rounded-full bg-success pulse-ring" />
         </div>
         <div>
-          <p className="text-sm font-bold tracking-tight">SENTINEL</p>
-          <p className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase">IoT Command</p>
+          <p className="text-sm font-bold tracking-tight">CRASH GUARD</p>
+          <p className="text-[10px] text-muted-foreground tracking-[0.2em] uppercase">Accident Response</p>
         </div>
       </div>
 
@@ -58,23 +53,6 @@ export function Sidebar() {
           );
         })}
       </nav>
-
-      <div className="m-3 rounded-xl glass p-4 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-30" style={{ background: "var(--gradient-radial)" }} />
-        <div className="relative">
-          <div className="flex items-center gap-2 mb-2">
-            <Radio className="h-3.5 w-3.5 text-success" />
-            <span className="text-[10px] font-mono uppercase tracking-wider text-success">System Live</span>
-          </div>
-          <p className="text-xs text-muted-foreground leading-relaxed">
-            247 sensors online · 3 regions
-          </p>
-          <div className="mt-3 flex items-center gap-2 text-[10px] font-mono text-muted-foreground">
-            <AlertTriangle className="h-3 w-3 text-accent" />
-            <span>3 active incidents</span>
-          </div>
-        </div>
-      </div>
     </aside>
   );
 }

@@ -48,7 +48,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "SENTINEL — IoT Accident Response Command Center" },
+      { title: "Crash Guard — IoT Accident Response Dashboard" },
       { name: "description", content: "Real-time IoT accident monitoring and emergency dispatch dashboard." },
     ],
     links: [

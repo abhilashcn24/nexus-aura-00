@@ -41,13 +41,6 @@ export function ActiveIncidentsTable() {
           <h3 className="text-sm font-semibold">Active Incidents</h3>
           <p className="text-xs text-muted-foreground mt-0.5">Real-time emergency response queue</p>
         </div>
-        <div className="flex gap-2">
-          {["All", "Critical", "High", "Active"].map((f, i) => (
-            <button key={f} className={`px-3 py-1.5 rounded-md text-xs font-medium border ${i === 0 ? "border-primary/40 bg-primary/10 text-foreground" : "border-white/10 bg-white/5 text-muted-foreground hover:text-foreground"}`}>
-              {f}
-            </button>
-          ))}
-        </div>
       </div>
       <div className="overflow-x-auto scrollbar-thin">
         <table className="w-full text-sm">
